@@ -1,16 +1,20 @@
 package com.skakundima.spring.boot.KataTask_3_1_2.dao;
 
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+
+//import javax.persistence.EntityManager;
+//import javax.persistence.PersistenceContext;
+
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import com.skakundima.spring.boot.KataTask_3_1_2.models.User;
 
-
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.util.List;
 
 
-@Component
+@Repository
 @Transactional(readOnly = true)
 public class UserDaoImpl implements UserDAO {
 

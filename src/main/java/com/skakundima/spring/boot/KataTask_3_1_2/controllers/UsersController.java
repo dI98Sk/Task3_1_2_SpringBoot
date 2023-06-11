@@ -25,7 +25,7 @@ public class UsersController {
 
 
     @GetMapping("/")
-    public String users(@ModelAttribute("user") User user, Model model, Long id) {
+    public String getUsers(@ModelAttribute("user") User user, Model model, Long id) {
 
 
         model.addAttribute("users", usersService.findAll());
